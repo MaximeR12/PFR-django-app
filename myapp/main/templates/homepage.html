@@ -1,12 +1,13 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Homepage</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-</head>
-<body>
-    <h1>Bonjour monde !</h1>
-</body>
-</html>
+{% block title %}
+<title>Bonjour monde !</title>
+{% endblock  %}
+
+{% block body %}
+
+
+Bonjour {{user.username}}
+
+
+{% endblock body %}
