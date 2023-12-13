@@ -1,9 +1,9 @@
-{% comment %} {% load static %} {% endcomment %}
+{% load static %}
 
 <html>
     <head>
         {% block title %} {% endblock %}
-
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     </head>
 
     <body>
@@ -36,7 +36,7 @@
 
         <footer><!-- #######################    FOOTER   #################################-->
             <div class="footercont">
-                <p><span class="footer-title">About :</span><br>Website created by Maxime Rowell as en exercise for Simplon Tech IA Roubaix</p>
+                <p><span class="footer-title">About :</span><br>Website created by Maxime Rowell as en exercise during Simplon's Dev IA course</p>
                 <p><span class="footer-title">Contact</span><br>Email : rowell.maxime2001@gmail.com</p>
             </div>
         <footer>

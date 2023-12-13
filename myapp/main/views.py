@@ -11,8 +11,8 @@ from django.contrib import messages
 from dotenv import load_dotenv
 #load_dotenv()
 
-# Create your views here.
 def homepage(request):
+    print(request.user.username)
     return render(request, 'homepage.html')
 
 def register_user(request):
@@ -38,16 +38,14 @@ def login_user(request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
-        print("POST")
         if user is not None:
-            print("USER")
+            print("USER", user.username)
             login(request, user)
             messages.success(request, "You're now logged in")
             return redirect('homepage')
         else:
             messages.success(request, "Could not log you in, verify your username/password")
             return redirect('login')
-
     else:
         return render(request, 'login.html') 
 
